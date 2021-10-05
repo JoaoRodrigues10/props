@@ -11,7 +11,8 @@ export default function DetalheProdutos(props) {
 
     function comprar() {
 
-        //// O Cookie.get le o 'carrinho'
+        //// O Cookie.get le o 'carrinho' e ser for diferente de nulo ele retorna um array vazio,
+        //// se o Cookie não estiver vazio, converte o Cookie em Array pelo JSON.parse()o
         let carrinho = Cookie.get('carrinho')
         carrinho = carrinho != null
                 ? JSON.parse(carrinho)
